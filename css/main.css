@@ -1,0 +1,195 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/*Start main style */
+html{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    scroll-behavior: smooth !important;
+    scroll-padding-top:40px ;
+}
+
+h1,
+h2,
+h3,
+h4{
+    text-transform: capitalize;
+}
+section:not(section.home){
+    padding-block:2em;
+}
+.subtitle{
+    color:black;
+    
+}
+.sec-title{
+    position:relative;
+    width:-webkit-fit-content;
+    width:-moz-fit-content;
+    width:fit-content;
+    margin-bottom:2em;
+}
+.sec-title::after{
+    position: absolute;
+    content: '';
+    top:130%;
+    left:50%;
+    -webkit-transform:translateX(-50%);
+        -ms-transform:translateX(-50%);
+            transform:translateX(-50%);
+    width:30px;
+    height: 5px;
+    /* margin-inline: auto; */
+    background-color: #0078FF;
+}
+/* start  home */
+.home{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.233)), to(rgba(0, 0, 0, 0.233))), url(../imgs/hero-bg.jpg);
+    background-image: -o-linear-gradient(rgba(0, 0, 0, 0.233), rgba(0, 0, 0, 0.233)), url(../imgs/hero-bg.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.233), rgba(0, 0, 0, 0.233)), url(../imgs/hero-bg.jpg);
+    background-size:cover;
+    background-position: top center;
+}
+.home nav .offcanvas .offcanvas-body ul li a{
+    text-transform: uppercase;
+    position: relative;
+}
+.nav-link.active:not(.dropdown-toggle)::after{
+    content: "";
+    position: absolute;
+    width:70%;
+    bottom:0;
+    height: 3px;
+    left:0;
+    background-color:white;
+}
+  
+ .nav-link:not(.dropdown-toggle)::after{
+    content: "";
+    position: absolute;
+    width:0%;
+    bottom:0;
+    height: 3px;
+    left:0;
+    background-color:white;
+    -webkit-transition: width 1s;
+    -o-transition: width 1s;
+    transition: width 1s;
+}
+.nav-link:not(.dropdown-toggle):hover::after{
+    width:70%;
+    
+}
+.nav .navbar-toggler{
+    border:none;
+}
+nav .navbar-toggler:focus{
+    box-shadow: none;
+}
+@media screen and (min-width:992px){
+    .home nav .offcanvas{
+        visibility: visible;
+        position: static;
+        -webkit-transform:scale(1,1);
+            -ms-transform:scale(1,1);
+                transform:scale(1,1);
+        width:-webkit-fit-content;
+        width:-moz-fit-content;
+        width:fit-content;
+        background-color: transparent ;
+    }
+   
+    .home nav .offcanvas .offcanvas-body  ul li a{
+        color:white;
+    }
+    .home nav .offcanvas .offcanvas-body ul li.dropdown{
+        position: static;
+    }
+    .home nav .offcanvas .offcanvas-body ul li.dropdown > ul{
+        position: absolute;
+        left:60%;
+    }
+}
+
+.home .content{
+    height:100vh;
+}
+/* End home */
+/* start about */
+/*  */
+.about .container{
+    -webkit-box-shadow: 0 0 10px  rgba(0, 0, 0, 0.308);
+            box-shadow: 0 0 10px  rgba(0, 0, 0, 0.308);
+}
+.about .sec-title::after,
+.contact .sec-title::after{
+    left:0%;
+    -webkit-transform:translateX(0);
+        -ms-transform:translateX(0);
+            transform:translateX(0);
+    width:50px;
+}
+/* End about */
+/* Start services */
+.services .content .icon:hover{
+    background-color: #0078FF;
+    
+}
+.services .content .col:hover i,
+.contact .social i:hover{
+   outline:7px solid #0077ff48;
+   color:white;
+   background-color: #0078FF;
+}
+.services .content .col:hover i{
+    -webkit-transition: outline 1s;
+    -o-transition: outline 1s;
+    transition: outline 1s;
+}
+.services .numbers{
+    background-image:-webkit-gradient(linear,left top, left bottom,from(#0077ff94),to(#0077ff94)), url(../imgs/counters-bg.jpg);
+    background-image:-o-linear-gradient(#0077ff94,#0077ff94), url(../imgs/counters-bg.jpg);
+    background-image:linear-gradient(#0077ff94,#0077ff94), url(../imgs/counters-bg.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+}
+/* Start portfolio */
+.portfolio .col:hover .cont-img img{
+    -webkit-transform:scale(2,2) ;
+        -ms-transform:scale(2,2) ;
+            transform:scale(2,2) ;
+}
+.portfolio .col .cont-img img{
+    -webkit-transition: -webkit-transform 2s;
+    transition: -webkit-transform 2s;
+    -o-transition: transform 2s;
+    transition: transform 2s;
+    transition: transform 2s, -webkit-transform 2s;
+}
+.portfolio .slider,
+.contact{
+    background-image:-webkit-gradient(linear,left top, left bottom,from(#0077ff94),to(#0077ff94)), url(../imgs/overlay-bg.jpg);
+    background-image:-o-linear-gradient(#0077ff94,#0077ff94), url(../imgs/overlay-bg.jpg);
+    background-image:linear-gradient(#0077ff94,#0077ff94), url(../imgs/overlay-bg.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+}
+.portfolio button.carousel-control-next,
+.portfolio button.carousel-control-prev{
+    top:100%;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background-color: white !important;
+}
+.portfolio button.carousel-control-next{
+    right:45%;
+}
+.portfolio button.carousel-control-prev{
+    left: 45%;
+}
+/* End  Portfolio */
